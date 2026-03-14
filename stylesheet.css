@@ -1,25 +1,26 @@
 body {
     background-color: rgb(33, 41, 58);
     align-items: center;
+    font-family: Arial, sans-serif;
 }
 
 .header {
     color: rgb(157, 189, 13);
     text-align: center;
-    position: relative;
-    font-weight: 200;
-    font-size: 30px;
-    padding: 10px;
+    font-weight: 300;
+    font-size: 32px;
+    padding: 20px 10px;
     margin-top: 25px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgb(157, 189, 13);
 }
 
-.sub{
-    color: aliceblue;
+.sub {
+    color: rgb(187, 236, 155);
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
-    margin: 20px;
-    position: relative;
+    margin: 25px auto;
 }
 
 .tabla-lenguajes {
@@ -33,15 +34,48 @@ body {
 .tabla-lenguajes th {
     background-color: rgb(157, 189, 13);
     color: rgb(33, 41, 58);
-    padding: 10px 15px;
+    padding: 12px 15px;
     text-align: center;
+    font-size: 16px;
 }
 
 .tabla-lenguajes td {
     padding: 10px 15px;
     text-align: center;
-    border-bottom: 1px solid rgb(157, 189, 13);
+    border-bottom: 1px solid rgba(157, 189, 13, 0.4);
 }
 
+.tabla-lenguajes tbody tr:hover {
+    background-color: rgba(157, 189, 13, 0.1);
+}
 
+.so {
+    color: rgb(157, 189, 13);
+    text-align: center;
+    font-weight: 300;
+    font-size: 28px;
+    margin-top: 60px;
+    letter-spacing: 1px;
+}
 
+.so-cont {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.h2-so {
+    color: rgb(134, 236, 202);
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.p-so {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 15px;
+}
