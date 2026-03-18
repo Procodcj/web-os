@@ -1,24 +1,29 @@
 # Web-OS 🌐
 
-Web-OS es un proyecto abierto y colaborativo donde cualquiera puede compartir sus conocimientos sobre programación y tecnología.
+Web-OS is an open and collaborative project where anyone can share their knowledge about programming and technology.
 
-## ¿De qué trata?
+## What is it about?
 
-La idea es ir construyendo poco a poco una página web con información sobre lenguajes de programación, herramientas y más. Sin prisa, sin límites.
+The idea is to gradually build a web page with information about programming languages, tools, and more. No rush, no limits.
 
-## Tecnologías usadas
+## Technologies used
 
 - HTML
 - CSS
-- JavaScript *(próximamente)*
+- JavaScript *(coming soon)*
 
-## ¿Cómo contribuir?
+## How to contribute?
 
-1. Haz un fork del repositorio
-2. Agrega tu contenido o mejora algo existente
-3. Haz commit de tus cambios
-4. Manda un pull request y lo revisamos
+1. Fork the repository
+2. Add your content or improve something existing
+3. Commit your changes
+4. Send a pull request and we'll review it
 
-## Estado del proyecto
+## Project status
 
-🚧 En construcción — el proyecto está creciendo, toda contribución es bienvenida. Si quieres adelantarte y agregar JavaScript, ¡eres más que bienvenido!
+🚧 Under construction — the project is growing, all contributions are welcome. If you want to get ahead and add JavaScript, you're more than welcome!
+```
+
+Y el commit:
+```
+docs: translate README to English
