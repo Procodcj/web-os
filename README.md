@@ -22,5 +22,5 @@ The idea is to gradually build a web page with information about programming lan
 ## Project status
 
 🚧 Under construction — the project is growing, all contributions are welcome. If you want to get ahead and add JavaScript, you're more than welcome!
-```
+
 
