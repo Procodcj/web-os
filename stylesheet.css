@@ -79,3 +79,74 @@ body {
     text-align: left;
     margin-bottom: 15px;
 }
+
+
+.projects-title {
+    color: rgb(157, 189, 13);
+    text-align: center;
+    font-weight: 300;
+    font-size: 28px;
+    margin-top: 60px;
+    letter-spacing: 1px;
+}
+
+.projects-sub {
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.rings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    transition: border-color 0.4s ease;
+}
+
+.ring1 {
+    width: 120px;
+    height: 120px;
+    border-top-color: rgb(157, 189, 13);
+    animation: spin 2s linear infinite;
+}
+
+.ring2 {
+    width: 160px;
+    height: 160px;
+    border-right-color: rgb(134, 236, 202);
+    animation: spin 3s linear infinite reverse;
+}
+
+.ring3 {
+    width: 200px;
+    height: 200px;
+    border-bottom-color: rgb(187, 236, 155);
+    animation: spin 4s linear infinite;
+}
+
+.rings-container:hover .ring1 {
+    border-top-color: rgb(236, 134, 134);
+}
+
+.rings-container:hover .ring2 {
+    border-right-color: rgb(134, 179, 236);
+}
+
+.rings-container:hover .ring3 {
+    border-bottom-color: rgb(236, 210, 134);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
