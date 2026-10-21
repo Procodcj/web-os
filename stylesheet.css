@@ -1,56 +1,70 @@
+:root {
+    --bg-primary: rgb(33, 41, 58);
+    --accent-green: rgb(157, 189, 13);
+    --accent-light-green: rgb(187, 236, 155);
+    --accent-aqua: rgb(134, 236, 202);
+    --border-green: rgba(157, 189, 13, 0.4);
+    --row-hover-bg: rgba(157, 189, 13, 0.1);
+    --text-table: aliceblue;
+    --text-light: rgba(255, 255, 255, 0.85);
+    --ring1-hover: rgb(236, 134, 134);
+    --ring2-hover: rgb(134, 179, 236);
+    --ring3-hover: rgb(236, 210, 134);
+}
+
 body {
-    background-color: rgb(33, 41, 58);
+    background-color: var(--bg-primary);
     align-items: center;
     font-family: Arial, sans-serif;
 }
 
 .header {
-    color: rgb(157, 189, 13);
+    color: var(--accent-green);
     text-align: center;
     font-weight: 300;
     font-size: 32px;
     padding: 20px 10px;
     margin-top: 25px;
     letter-spacing: 1px;
-    border-bottom: 1px solid rgb(157, 189, 13);
+    border-bottom: 1px solid var(--accent-green);
 }
 
 .sub {
-    color: rgb(187, 236, 155);
+    color: var(--accent-light-green);
     font-weight: 400;
     font-size: 18px;
     text-align: center;
     margin: 25px auto;
 }
 
-.tabla-lenguajes {
+.languages-table {
     margin: 30px auto;
     border-collapse: collapse;
     width: 70%;
-    color: aliceblue;
+    color: var(--text-table);
     font-size: 15px;
 }
 
-.tabla-lenguajes th {
-    background-color: rgb(157, 189, 13);
-    color: rgb(33, 41, 58);
+.languages-table th {
+    background-color: var(--accent-green);
+    color: var(--bg-primary);
     padding: 12px 15px;
     text-align: center;
     font-size: 16px;
 }
 
-.tabla-lenguajes td {
+.languages-table td {
     padding: 10px 15px;
     text-align: center;
-    border-bottom: 1px solid rgba(157, 189, 13, 0.4);
+    border-bottom: 1px solid var(--border-green);
 }
 
-.tabla-lenguajes tbody tr:hover {
-    background-color: rgba(157, 189, 13, 0.1);
+.languages-table tbody tr:hover {
+    background-color: var(--row-hover-bg);
 }
 
-.so {
-    color: rgb(157, 189, 13);
+.os-title {
+    color: var(--accent-green);
     text-align: center;
     font-weight: 300;
     font-size: 28px;
@@ -58,22 +72,22 @@ body {
     letter-spacing: 1px;
 }
 
-.so-cont {
+.os-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px 30px;
 }
 
-.h2-so {
-    color: rgb(134, 236, 202);
+.os-subtitle {
+    color: var(--accent-aqua);
     font-weight: 400;
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 20px;
 }
 
-.p-so {
-    color: rgba(255, 255, 255, 0.85);
+.os-text {
+    color: var(--text-light);
     font-size: 16px;
     line-height: 1.8;
     text-align: left;
@@ -82,7 +96,7 @@ body {
 
 
 .projects-title {
-    color: rgb(157, 189, 13);
+    color: var(--accent-green);
     text-align: center;
     font-weight: 300;
     font-size: 28px;
@@ -91,7 +105,7 @@ body {
 }
 
 .projects-sub {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-light);
     text-align: center;
     font-size: 16px;
     margin-top: 20px;
@@ -116,37 +130,43 @@ body {
 .ring1 {
     width: 120px;
     height: 120px;
-    border-top-color: rgb(157, 189, 13);
+    border-top-color: var(--accent-green);
     animation: spin 2s linear infinite;
 }
 
 .ring2 {
     width: 160px;
     height: 160px;
-    border-right-color: rgb(134, 236, 202);
+    border-right-color: var(--accent-aqua);
     animation: spin 3s linear infinite reverse;
 }
 
 .ring3 {
     width: 200px;
     height: 200px;
-    border-bottom-color: rgb(187, 236, 155);
+    border-bottom-color: var(--accent-light-green);
     animation: spin 4s linear infinite;
 }
 
 .rings-container:hover .ring1 {
-    border-top-color: rgb(236, 134, 134);
+    border-top-color: var(--ring1-hover);
 }
 
 .rings-container:hover .ring2 {
-    border-right-color: rgb(134, 179, 236);
+    border-right-color: var(--ring2-hover);
 }
 
 .rings-container:hover .ring3 {
-    border-bottom-color: rgb(236, 210, 134);
+    border-bottom-color: var(--ring3-hover);
 }
 
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .languages-table {
+        width: 95%;
+    }
 }
