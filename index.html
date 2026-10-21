@@ -15,6 +15,16 @@
         <section>
             <p class="sub">Let's start by talking about some programming languages.</p>
 
+            <div class="filter-controls">
+                <input type="text" id="language-search" class="search-input" placeholder="Search language...">
+                <div class="filter-buttons">
+                    <button type="button" class="filter-btn active" data-difficulty="All">All</button>
+                    <button type="button" class="filter-btn" data-difficulty="Easy">Easy</button>
+                    <button type="button" class="filter-btn" data-difficulty="Intermediate">Intermediate</button>
+                    <button type="button" class="filter-btn" data-difficulty="Hard">Hard</button>
+                </div>
+            </div>
+
             <table class="languages-table">
                 <thead>
                     <tr>
@@ -114,5 +124,7 @@
     <footer>
         <p class="projects-sub">Web-OS — Open and collaborative educational project.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
