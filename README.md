@@ -10,7 +10,7 @@ The idea is to gradually build a web page with information about programming lan
 
 - HTML
 - CSS
-- JavaScript *(coming soon)*
+- JavaScript (interactive language search/difficulty filtering and dynamic community project cards)
 
 ## How to contribute?
 
@@ -19,8 +19,13 @@ The idea is to gradually build a web page with information about programming lan
 3. Commit your changes
 4. Send a pull request and we'll review it
 
+### Quick contribution guide
+
+- **Add a programming language:** Open `index.html`, locate `<table class="languages-table">`, and add a new `<tr>` inside `<tbody>` with three `<td>` cells: Language name, What is it used for?, and Difficulty (`Easy`, `Intermediate`, or `Hard`).
+- **Add a community project:** Open `script.js`, locate the `communityProjects` array, and add a new object with `title`, `description`, and `link`.
+
 ## Project status
 
-🚧 Under construction — the project is growing, all contributions are welcome. If you want to get ahead and add JavaScript, you're more than welcome!
+🚧 Under construction — the project is growing and already features interactive search, filtering, and dynamic project cards. All contributions are welcome!
 
 
