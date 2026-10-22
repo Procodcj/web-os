@@ -4,7 +4,7 @@ Web-OS is an open and collaborative project where anyone can share their knowled
 
 ## 🌐 Live Demo
 
-You can view the live site here: [Web-OS on GitHub Pages](https://procodcj.github.io/Web-OS/)
+You can view the live site here: [Web-OS on GitHub Pages](https://procodcj.github.io/web-os/)
 
 
 ## What is it about?
