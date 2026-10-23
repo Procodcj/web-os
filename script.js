@@ -142,10 +142,13 @@ function renderProjects() {
     communityProjects.forEach((project) => {
         const card = document.createElement('article');
         card.className = 'project-card';
+        const isExternal = /^https?:\/\//i.test(project.link);
+        const externalAttrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+
         card.innerHTML = `
             <h3>${project.title}</h3>
             <p>${project.description}</p>
-            <a href="${project.link}">View Project →</a>
+            <a href="${project.link}"${externalAttrs}>View Project →</a>
         `;
         projectsGrid.appendChild(card);
     });
