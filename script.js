@@ -124,7 +124,7 @@ const communityProjects = [
     {
         title: 'CLI Cheat Sheet',
         description: 'Quick reference guide for essential Linux, macOS, and Windows terminal commands.',
-        link: '#operating-systems'
+        link: 'https://cli.github.com/manual/'
     },
     {
         title: 'Language Explorer',
