@@ -53,57 +53,14 @@
                 </div>
             </div>
 
-            <table class="languages-table">
-                <thead>
-                    <tr>
-                        <th>Language</th>
-                        <th>What is it used for?</th>
-                        <th>Difficulty</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>HTML</td>
-                        <td>Structures the content of a web page</td>
-                        <td>Easy</td>
-                    </tr>
-                    <tr>
-                        <td>CSS</td>
-                        <td>Styles and designs a web page</td>
-                        <td>Easy</td>
-                    </tr>
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>Adds interactivity and dynamism to a web page</td>
-                        <td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>Web development, data science, artificial intelligence and automation</td>
-                        <td>Easy</td>
-                    </tr>
-                    <tr>
-                        <td>PHP</td>
-                        <td>Server-side web development</td>
-                        <td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td>C</td>
-                        <td>Systems programming, hardware and low-level software</td>
-                        <td>Hard</td>
-                    </tr>
-                    <tr>
-                        <td>C++</td>
-                        <td>Video games, high-performance applications and operating systems</td>
-                        <td>Hard</td>
-                    </tr>
-                    <tr>
-                        <td>Go</td>
-                        <td>Server development, APIs and high-performance applications</td>
-                        <td>Intermediate</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div id="languages-container" class="tags-container"></div>
+
+            <dialog id="language-modal" class="custom-modal">
+                <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+                <h3 id="modal-title"></h3>
+                <span id="modal-difficulty" class="badge"></span>
+                <p id="modal-description"></p>
+            </dialog>
         </section>
 
         <section id="operating-systems">

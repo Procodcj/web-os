@@ -1,24 +1,97 @@
+const languagesData = [
+    {
+        name: 'HTML',
+        difficulty: 'Easy',
+        description: 'Structures the content of a web page.'
+    },
+    {
+        name: 'CSS',
+        difficulty: 'Easy',
+        description: 'Styles and designs a web page.'
+    },
+    {
+        name: 'JavaScript',
+        difficulty: 'Intermediate',
+        description: 'Adds interactivity and dynamism to a web page.'
+    },
+    {
+        name: 'Python',
+        difficulty: 'Easy',
+        description: 'Web development, data science, artificial intelligence and automation.'
+    },
+    {
+        name: 'PHP',
+        difficulty: 'Intermediate',
+        description: 'Server-side web development.'
+    },
+    {
+        name: 'C',
+        difficulty: 'Hard',
+        description: 'Systems programming, hardware and low-level software.'
+    },
+    {
+        name: 'C++',
+        difficulty: 'Hard',
+        description: 'Video games, high-performance applications and operating systems.'
+    },
+    {
+        name: 'Go',
+        difficulty: 'Intermediate',
+        description: 'Server development, APIs and high-performance applications.'
+    }
+];
+
 const searchInput = document.getElementById('language-search');
 const filterButtons = document.querySelectorAll('.filter-btn');
-const tableRows = document.querySelectorAll('.languages-table tbody tr');
+const languagesContainer = document.getElementById('languages-container');
+const languageModal = document.getElementById('language-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalDifficulty = document.getElementById('modal-difficulty');
+const modalDescription = document.getElementById('modal-description');
+const modalCloseBtn = languageModal ? languageModal.querySelector('.modal-close') : null;
 
 let activeDifficulty = 'All';
 
-function filterTable() {
-    const query = searchInput.value.trim().toLowerCase();
+function openLanguageModal(lang) {
+    if (!languageModal) return;
+    modalTitle.textContent = lang.name;
+    modalDifficulty.textContent = lang.difficulty;
+    modalDescription.textContent = lang.description;
+    languageModal.showModal();
+}
 
-    tableRows.forEach((row) => {
-        const languageName = row.cells[0].textContent.trim().toLowerCase();
-        const difficulty = row.cells[2].textContent.trim();
+function renderLanguageTags() {
+    if (!languagesContainer) return;
+    languagesContainer.innerHTML = '';
 
-        const matchesSearch = languageName.includes(query);
-        const matchesDifficulty = activeDifficulty === 'All' || difficulty === activeDifficulty;
+    languagesData.forEach((lang) => {
+        const tag = document.createElement('button');
+        tag.type = 'button';
+        tag.className = 'lang-tag';
+        tag.textContent = lang.name;
+        tag.dataset.name = lang.name.toLowerCase();
+        tag.dataset.difficulty = lang.difficulty;
 
-        row.style.display = matchesSearch && matchesDifficulty ? '' : 'none';
+        tag.addEventListener('click', () => openLanguageModal(lang));
+        languagesContainer.appendChild(tag);
     });
 }
 
-searchInput.addEventListener('input', filterTable);
+function filterLanguages() {
+    const query = searchInput.value.trim().toLowerCase();
+    const tags = languagesContainer.querySelectorAll('.lang-tag');
+
+    tags.forEach((tag) => {
+        const matchesSearch = tag.dataset.name.includes(query);
+        const matchesDifficulty = activeDifficulty === 'All' || tag.dataset.difficulty === activeDifficulty;
+
+        tag.style.display = matchesSearch && matchesDifficulty ? '' : 'none';
+    });
+}
+
+renderLanguageTags();
+
+searchInput.addEventListener('input', filterLanguages);
 
 filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -26,9 +99,21 @@ filterButtons.forEach((button) => {
         button.classList.add('active');
 
         activeDifficulty = button.dataset.difficulty;
-        filterTable();
+        filterLanguages();
     });
 });
+
+if (modalCloseBtn && languageModal) {
+    modalCloseBtn.addEventListener('click', () => {
+        languageModal.close();
+    });
+
+    languageModal.addEventListener('click', (event) => {
+        if (event.target === languageModal) {
+            languageModal.close();
+        }
+    });
+}
 
 const communityProjects = [
     {
