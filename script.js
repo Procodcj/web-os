@@ -38,6 +38,46 @@ const languagesData = [
         name: 'Go',
         difficulty: 'Intermediate',
         description: 'Server development, APIs and high-performance applications.'
+    },
+    {
+        name: 'Rust',
+        difficulty: 'Hard',
+        description: 'Systems programming language focused on performance, concurrency, and memory safety without a garbage collector.'
+    },
+    {
+        name: 'TypeScript',
+        difficulty: 'Intermediate',
+        description: 'Strongly typed superset of JavaScript that adds static typing and modern developer tooling.'
+    },
+    {
+        name: 'Java',
+        difficulty: 'Intermediate',
+        description: 'Cross-platform, object-oriented language widely used for enterprise backends and distributed systems.'
+    },
+    {
+        name: 'C#',
+        difficulty: 'Intermediate',
+        description: 'Modern, type-safe programming language developed by Microsoft for .NET and game development.'
+    },
+    {
+        name: 'SQL',
+        difficulty: 'Easy',
+        description: 'Standard structured query language for defining, manipulating, and managing relational databases.'
+    },
+    {
+        name: 'Kotlin',
+        difficulty: 'Intermediate',
+        description: 'Modern concise language targeting the JVM, designated as the preferred language for Android development.'
+    },
+    {
+        name: 'Swift',
+        difficulty: 'Intermediate',
+        description: 'High-performance, intuitive programming language developed by Apple for iOS and macOS systems.'
+    },
+    {
+        name: 'Ruby',
+        difficulty: 'Easy',
+        description: 'Dynamic, open-source language focused on developer happiness and rapid web application development.'
     }
 ];
 
